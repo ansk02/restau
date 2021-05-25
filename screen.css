@@ -496,6 +496,61 @@ select option{
 
 /*----------------------------------------------------------*/
 
+/* FOOTER */
+
+.footer{
+
+	font-weight: 300;
+	color: #fff;
+	padding: 40px 0;
+	background: #383838 bottom right no-repeat;
+}
+
+.footer-title{
+	color: #c89446;
+	text-transform: uppercase;
+	margin-bottom: 1.25rem;
+}
+
+
+.footer-colum{
+	margin-bottom: 2rem;
+}
+
+.footer a{
+	text-decoration: underline;
+}
+
+.footer a:hover{
+	color: #c89446;
+}
+
+.footer-credits span{
+
+	font-size: 0.93em;
+	font-weight: bold;
+
+}
+
+.footer-credits p{
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+
+.footer ul{
+	padding-left: 0;
+	list-style: none;
+}
+
+
+.footer ul li::before{
+
+	content: '- ';
+
+}
+/*-------------------------------------------------------------*/
 /*APPAREILS DONT LA LARGUEUR MINIMALE EST DE 600px*/
 
 @media only screen and (min-width: 600px)
@@ -795,6 +850,51 @@ select option{
 	.recipes-list-item:last-child{
 		padding-bottom: 0;
 	}
+
+	/*footer*/
+
+	.footer{
+		
+		background-image: url('img/splash.png');
+
+	}
+
+	.footer-columns{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer-column{
+
+		width: 290px;
+		
+		margin-right: 50px;
+	}
+
+
+	.footer-column:first-child{
+		width: 450px;
+	}
+
+
+	.footer ul{
+		padding-left: 0;
+		list-style: none;
+	}
+
+
+	.footer ul li::before{
+
+		content: '- ';
+
+	}
+
+
+	.footer-column:last-child{
+		margin-right: 0;
+		flex: none;
+	}
+
 
 }
 
