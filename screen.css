@@ -127,6 +127,16 @@ img{
 	margin-bottom: 50px;
 }
 
+/*.block-left .block-body{
+	display: flex; 
+	flex-flow: column wrap;
+	justify-content: space-between;
+}
+
+.title-paragraph{
+	flex-grow: 1;
+}*/
+
 .block-img{
 	max-width: 350px;
 	margin: 0 auto;
@@ -135,14 +145,14 @@ img{
 
 .title{
 
-	margin: 0;
+	/*margin: 0;*/
 	font-size: 1.75rem;
 	line-height: 1.1rem;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	color: #000;
 	font-weight: bold;
-	/*margin:1rem 0 0 0;*/
+	margin:1rem 0;
 	width: 280px;
 	height: 78px;
 }
@@ -350,9 +360,76 @@ img{
 	font-size: 0.875rem;
 	color: #ddd;
 	background: #c89446;
-	border: none;
+	border:solid 1px transparent;
 	padding: 11px 1rem;
 	cursor: pointer;
+	text-transform: uppercase; 
+	transition: .3s;
+}
+
+.button:hover{
+
+	color: #c89446;
+	border: solid 1px #c89446;
+	background: transparent;
+}
+
+.reservation .block-centered .block-body{
+	max-width: 825px;
+}
+
+
+.reservation p{
+	max-width: 625px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+select option{
+	color: #000;
+}
+
+/*----------------------------------------------------------*/
+
+/* MAP ET RECETTES */
+
+.recipes-list{
+
+	font-weight: 300;
+	font-size: 1.125rem;
+}
+
+
+.recipes-list strong{
+
+	color: #383838;
+	font-weight: bold;
+}
+
+
+.recipes-date strong{
+	font-size: 1.5rem;
+}
+
+.recipes-list-item{
+	margin-bottom: solid 1px #f2f2f2;
+	/*padding: 20px 0;*/
+	margin-top: 1em;
+}
+
+.recipes-list-item:last-child{
+	
+	margin-bottom: 0;	
+}
+
+
+.title-paragraph{
+	background-color: crimson;
+	margin-top: 2rem;
+}
+.title-paragraph2{
+	background-color: crimson;
+	margin-top: 3rem;
 }
 
 /*----------------------------------------------------------*/
@@ -469,7 +546,7 @@ img{
 
 		content: '';
 		display: block;
-		border: solid 1px #c89446;
+		/*border: solid 1px #c89446;*/
 		position: absolute; 
 		top: -30px;
 		left: -30px;
@@ -490,8 +567,15 @@ img{
 
 	.title::before{
 
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 	}
+
+
+	
+/*	.title::after{
+
+		margin-bottom: 20px;
+	}*/
 
 	.home-section{
 		background: 
@@ -592,9 +676,29 @@ img{
 	}
 
 
+	/*reservation*/
 	.reservation
 	{
 		padding: 70px 0;
+
+	}
+
+	.reservation-form-row{
+
+		margin: 60px 0;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	.reservation-form-row input, 	.reservation-form-row select{
+		width: calc( 33.33% - 20px );
+		margin-bottom: 0;
+	}
+
+	.reservation .button{
+
+		width: calc( 33.33% - 20px );
 
 	}
 
