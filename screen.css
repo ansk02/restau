@@ -393,6 +393,10 @@ select option{
 
 /* MAP ET RECETTES */
 
+.recipes{
+	padding: 50px 0;
+}
+
 .recipes-list{
 
 	font-weight: 300;
@@ -422,13 +426,17 @@ select option{
 	margin-bottom: 0;	
 }
 
+.recipes .more{
+	margin-top: 50px;
+	display: block; 
+	text-align: right;
+}
+
 
 .title-paragraph{
-	background-color: crimson;
 	margin-top: 2rem;
 }
 .title-paragraph2{
-	background-color: crimson;
 	margin-top: 3rem;
 }
 
@@ -700,6 +708,11 @@ select option{
 
 		width: calc( 33.33% - 20px );
 
+	}
+
+
+	.recipes{
+		padding: 80px 0;
 	}
 
 }
