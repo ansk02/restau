@@ -33,6 +33,12 @@ img{
 	url('img/eggs.jpg') center center / cover no-repeat ;
 	color: #FFF;
 }
+.recette{
+
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.92) , rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+	url('img/salad-chicken.jpg') center center / cover no-repeat ;
+	color: #FFF;
+}
 
 .topbar{
 	padding: 18px 20px;
@@ -396,8 +402,7 @@ select option{
 	color: #000;
 }
 
-/*----------------------------------------------------------*/
-
+/*-----------------------------------------------------------------------------------*/
 /* MAP ET RECETTES */
 
 .recipes{
@@ -485,18 +490,16 @@ select option{
 	margin-top: 3rem;
 }
 
-/*----------------------------------------------------------*/
-
-/*----MAP------*/
+/*-----------------------------------------------------------------------------------*/
+									/*----MAP------*/
 
 .map{
 	width: 100%;
 	height: 460px;
 }
 
-/*----------------------------------------------------------*/
-
-/* FOOTER */
+/*-----------------------------------------------------------------------------------*/
+									/* FOOTER */
 
 .footer{
 
@@ -550,8 +553,104 @@ select option{
 	content: '- ';
 
 }
-/*-------------------------------------------------------------*/
-/*APPAREILS DONT LA LARGUEUR MINIMALE EST DE 600px*/
+
+
+/*-------------------------------------------------------------------------------------*/
+						/*	PAGE RECETTE1 VERSION MOBILE */
+
+.block-ingredients{
+
+	border: solid 1px #c89446;
+	padding: 35px 10px;
+	font-weight: 600;
+	color: #383838;
+}
+
+.block-ingredients ul{
+
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.block-ingredients li{
+	padding: 5px 0;
+}
+
+
+.block-ingredients span{
+
+	width: 20px;
+	text-align: right;
+	display: inline-block;
+	margin-right: 20px;
+	font-weight: 300;
+}
+
+.section-overflow{
+
+	padding:  15px 0;
+}
+
+
+.block-video{
+	text-align: center;
+	position: relative;
+	/*background: #383838;*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.block-video::after{
+	content: '';
+	background: url('img/play.png') center center no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: background-size;
+}
+
+
+
+
+.block-video:hover::after{
+	background-size: 100px 100px;
+	cursor: pointer;
+}
+
+
+.block-video video{
+	width: 280px;
+	/*max-width: 280px;*/
+	height: auto;
+	box-shadow: 0 0 30px rgba(128, 128, 128, .5);
+	/*opacity: .6;*/
+}
+
+.block-video img{
+	box-shadow: 0 0 30px rgba(128, 128, 128, .5);
+}
+
+
+
+.recipes-mosaic p{
+	margin-top:  0;
+	margin-bottom: 0.5rem;
+}
+
+
+.recipes-mosaic .more{
+	margin-top:  0.5rem;
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+				/*APPAREILS DONT LA LARGUEUR MINIMALE EST DE 600px*/
 
 @media only screen and (min-width: 600px)
 {
@@ -559,11 +658,6 @@ select option{
 		font-size: 16px;
 	}
 
-	body{
-		/*background: 
-		linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-		url('img/screenshot.png') top center no-repeat;*/
-	}
 
 	.topbar{
 		display: flex;
@@ -604,9 +698,8 @@ select option{
 	}
 }
 
-/*----------------------------------------------------------------------------*/
-
-/*APPAREILS DONT LA LARGUEUR MINIMALE EST DE 800px */
+/*--------------------------------------------------------------------------------------*/
+					/*APPAREILS DONT LA LARGUEUR MINIMALE EST DE 800px */
 
 @media only screen and (min-width: 800px){
 
@@ -723,13 +816,13 @@ select option{
 		width:calc(50% - 30px);
 	}
 
-	.menu-summary-item:nth-child(even){
+	.menu-summary .menu-summary-item:nth-child(even){
 		text-align: right;
 		padding-left: 0;
 		padding-right: 192px;
 	}
 
-	.menu-summary-item:nth-child(even) .menu-summary-image{
+	.menu-summary .menu-summary-item:nth-child(even) .menu-summary-image{
 		left: auto;
 		right: 0;
 	}
@@ -830,6 +923,11 @@ select option{
 		background-size: 589px auto;
 	}
 
+	.recipes a{
+		text-transform: underline;
+		color: #c89446;
+	}
+
 	.recipes-list{
 		margin-top: 64px;
 		margin-bottom: 64px;
@@ -896,7 +994,77 @@ select option{
 	}
 
 
+	/*-------------------------------------------*/
+	/*PAGE RECETTE1*/
+
+	.block-ingredients{
+
+		width: 350px;
+		padding: 35px 40px;
+	}
+
+
+	.block-ingredients ul{
+
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+
+	.block-ingredients span{
+
+		width: 20px;
+		text-align: right;
+		display: inline-block;
+		margin-right: 50px;
+	}
+
+
+	.block-ingredients li{
+		padding: 10px 0;
+	}
+
+	.section-overflow{
+		padding: 0;
+		margin-top: -1px;
+	}
+
+	.block-right .block-video{
+		margin-left: 28px;
+	}
+
+	.block-video video{
+		width: 350px;
+		height: auto;
+		box-shadow: 0 0 30px rgba(128, 128, 128, .5);
+	}
+
+
+	.recipes-mosaic{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+
+	.recipes-mosaic .menu-summary-item{
+
+		padding-left: 150px;
+		width: calc(50% - 25px);
+		margin-bottom: 50px;
+	}
+
+	.recipes-mosaic .menu-summary-image{
+		width: 125px;
+	}
+
 }
+
+
+
+
+/*------------------------------[SECTION DEDIEE À L'EFFET DE DEFILEMENT]----------------------------------*/
 
 [class *= 'reveal-']{
 
@@ -922,3 +1090,4 @@ select option{
 	transition-delay: .3s;
 }
 
+/*-----------------------------------------------------------------------------------*/
